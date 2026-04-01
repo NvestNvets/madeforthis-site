@@ -19,8 +19,23 @@ jobs:
         with:
           node-version: 20
 
+      - name: Authenticate to Google Cloud
+        if: ${{ secrets.GCP_SA_KEY != '' }}
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Setup gcloud
+        if: ${{ secrets.GCP_SA_KEY != '' }}
+        uses: google-github-actions/setup-gcloud@v2
+
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Deploy to Firebase Hosting
+      - name: Deploy to Firebase Hosting with service account
+        if: ${{ secrets.GCP_SA_KEY != '' }}
+        run: firebase deploy --only hosting --project madeforthis
+
+      - name: Deploy to Firebase Hosting with CI token
+        if: ${{ secrets.GCP_SA_KEY == '' }}
         run: firebase deploy --only hosting --project madeforthis --token "${{ secrets.FIREBASE_TOKEN }}"
