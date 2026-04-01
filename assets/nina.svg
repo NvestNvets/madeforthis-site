@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 760" role="img" aria-labelledby="title desc">
+  <title id="title">Nina Portrait Placeholder</title>
+  <desc id="desc">Soft feminine placeholder portrait graphic.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8e8dc" />
+      <stop offset="100%" stop-color="#f2d7c8" />
+    </linearGradient>
+  </defs>
+  <rect width="700" height="760" rx="32" fill="url(#bg)" />
+  <circle cx="350" cy="280" r="130" fill="#f3cab2" />
+  <rect x="190" y="430" width="320" height="200" rx="34" fill="#fff6ee" stroke="#e8d8cb" />
+  <rect x="250" y="500" width="200" height="24" rx="12" fill="#ead9cc" />
+  <rect x="270" y="545" width="160" height="24" rx="12" fill="#ecdfd4" />
+</svg>

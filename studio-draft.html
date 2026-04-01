@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Made For This studio draft preview pending Christina review."
+    />
+    <title>Studio Draft | Made For This</title>
+    <link rel="stylesheet" href="style.css?v=20260401-8" />
+  </head>
+  <body class="logo-bg" data-site-key="madeforthis" data-page="studio-draft">
+    <div class="background-glow" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a class="brand" href="/index.html"
+          ><img src="/assets/brand/logo-primary.png" alt="Made For This" class="brand-logo"
+        /></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <a href="/index.html">Home</a>
+          <a href="/blog">Blog Hub</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a class="nav-cta" href="/contact.html">Work With Nina</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <p class="overline">Made For This Studio</p>
+        <h1 id="draft-preview-title">Loading draft preview...</h1>
+        <p id="draft-preview-subtitle">
+          This post is live on Made For This as a studio draft while Christina reviews it.
+        </p>
+        <p id="draft-preview-status" class="small-copy" role="status" aria-live="polite"></p>
+      </section>
+
+      <article id="draft-preview-shell" class="section post-shell reveal" hidden>
+        <div class="draft-review-banner">
+          <div>
+            <p class="overline" id="draft-preview-state">Pending Christina review</p>
+            <h2>This draft is live inside Made For This</h2>
+            <p id="draft-preview-policy" class="small-copy"></p>
+          </div>
+          <div class="draft-review-actions">
+            <button type="button" class="btn btn-primary" id="draft-preview-approve">Approve + Keep Demo</button>
+            <button type="button" class="btn" id="draft-preview-deny">Deny</button>
+            <button type="button" class="btn" id="draft-preview-hold">Hold</button>
+            <a class="btn" id="draft-preview-open-demo" href="#" target="_blank" rel="noopener noreferrer" hidden>Open WordPress demo</a>
+          </div>
+        </div>
+
+        <p class="post-meta" id="draft-preview-meta"></p>
+
+        <div class="draft-preview-support">
+          <div class="draft-preview-support-card">
+            <p class="overline">Pin variants</p>
+            <ul id="draft-preview-pins" class="clean-list"></ul>
+          </div>
+          <div class="draft-preview-support-card">
+            <p class="overline">Support links</p>
+            <div class="analytics-table">
+              <div class="analytics-row"><span>Printable</span><strong id="draft-preview-printable"></strong></div>
+              <div class="analytics-row"><span>Demo draft</span><strong id="draft-preview-demo"></strong></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="draft-preview-content" class="post-content"></div>
+
+        <details class="dashboard-note-box draft-edit-shell" open>
+          <summary><strong>Edit this draft</strong> <span class="small-copy">Trim text, save changes, or let Codee expand the post.</span></summary>
+          <div class="blog-draft-editor draft-preview-editor">
+            <label>Title<input type="text" id="draft-preview-edit-title" /></label>
+            <label>Meta description<textarea id="draft-preview-edit-meta" rows="3"></textarea></label>
+            <label>Excerpt<textarea id="draft-preview-edit-excerpt" rows="3"></textarea></label>
+            <label>Editor notes<textarea id="draft-preview-edit-notes" rows="4" placeholder="Ask for a sharper intro, more story, a stronger closing, or cleaner transitions."></textarea></label>
+            <label>Article HTML<textarea id="draft-preview-edit-article" rows="16"></textarea></label>
+          </div>
+          <div class="button-row" style="margin-top: 0.9rem">
+            <button type="button" class="btn btn-primary" id="draft-preview-save">Save Edit</button>
+            <button type="button" class="btn" id="draft-preview-expand">AI Generate More</button>
+          </div>
+        </details>
+      </article>
+
+      <section id="draft-preview-empty" class="section reveal" hidden>
+        <div class="dashboard-note-box">
+          <p class="overline">Studio draft</p>
+          <h2>This draft could not be found</h2>
+          <p class="small-copy">Return to the Blog Hub or Made For This Studio and open another draft.</p>
+          <div class="button-row" style="margin-top: 0.85rem">
+            <a class="btn btn-primary" href="/blog/">Open Blog Hub</a>
+            <a class="btn" href="/dashboard.html">Open Studio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">
+            <img src="/assets/brand/logo-primary.png" alt="Made For This" class="footer-logo" />
+          </p>
+          <p class="small-copy">Lifestyle, mindset, and intentional living.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Explore</p>
+          <p><a href="/index.html">Home</a> · <a href="/blog/">Blog Hub</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a></p>
+        </div>
+        <div>
+          <p class="footer-heading">Social</p>
+          <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a> · <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></p>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 Made For This. All rights reserved.</p>
+      <p class="footer-legal">Made For This™ is a trademark. Content and design are protected by copyright.</p>
+    </footer>
+
+    <script src="script.js?v=20260401-8"></script>
+  </body>
+</html>

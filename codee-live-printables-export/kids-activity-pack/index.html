@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids Activity Pack | AI K9 Live Printable</title>
+  <link rel="stylesheet" href="../_shared/live-printables.css" />
+</head>
+<body class="lp-bare-page">
+  <div class="lp-page-wrap lp-page-wrap-bare">
+    <div class="lp-float-controls" id="float-controls">
+      <button class="lp-float-btn" type="button" id="close-viewer-button">Close</button>
+      <a class="lp-float-btn" href="../assets/madeforthis-kids-printable.jpeg" download>Download</a>
+      <button class="lp-float-btn" type="button" id="float-print-button">Print</button>
+    </div>
+    <article class="lp-printable-shell lp-printable-shell-bare">
+      <div class="lp-printable-body lp-printable-body-bare">
+        <div class="lp-printable-canvas lp-printable-canvas-bare">
+          <button class="lp-open-viewer" type="button" id="open-viewer-button" aria-label="Open full screen view">
+            Tap to open
+          </button>
+          <div class="lp-design-stage lp-design-stage-bare" id="viewer-stage">
+            <img class="lp-design-image" src="../assets/madeforthis-kids-printable.jpeg" alt="Kids Activity Pack" />
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <script>
+    const body = document.body;
+    const stage = document.getElementById("viewer-stage");
+    const openButton = document.getElementById("open-viewer-button");
+    const closeButton = document.getElementById("close-viewer-button");
+    const floatControls = document.getElementById("float-controls");
+    let reopenAfterPrint = false;
+    const openViewer = () => {
+      body.classList.add("lp-viewer-open");
+      floatControls?.classList.add("is-visible");
+    };
+    const closeViewer = () => {
+      body.classList.remove("lp-viewer-open");
+      floatControls?.classList.remove("is-visible");
+    };
+    const printViewer = () => {
+      reopenAfterPrint = body.classList.contains("lp-viewer-open");
+      closeViewer();
+      window.print();
+    };
+    window.addEventListener("afterprint", () => {
+      if (reopenAfterPrint) openViewer();
+      reopenAfterPrint = false;
+    });
+    document.getElementById("float-print-button")?.addEventListener("click", printViewer);
+    openButton?.addEventListener("click", openViewer);
+    stage?.querySelector(".lp-design-image")?.addEventListener("click", () => { if (!body.classList.contains("lp-viewer-open")) openViewer(); });
+    closeButton?.addEventListener("click", closeViewer);
+    document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeViewer(); });
+  </script>
+</body>
+</html>

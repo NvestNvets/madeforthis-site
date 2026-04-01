@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="t d">
+  <title id="t">Post 7 Hero Image placeholder</title>
+  <desc id="d">Placeholder image for Post 7 Hero Image.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8ded7"/>
+      <stop offset="100%" stop-color="#c9c9c9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect x="60" y="60" width="1080" height="780" rx="36" fill="none" stroke="#8b5e4a" stroke-width="8"/>
+  <text x="600" y="420" text-anchor="middle" font-family="Avenir Next, Arial, sans-serif" font-size="54" fill="#1a1a1a">Post 7 Hero Image</text>
+  <text x="600" y="485" text-anchor="middle" font-family="Avenir Next, Arial, sans-serif" font-size="28" fill="#8b5e4a">Made For This Placeholder</text>
+</svg>

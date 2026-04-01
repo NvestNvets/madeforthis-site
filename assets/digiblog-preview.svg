@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 760" role="img" aria-labelledby="title desc">
+  <title id="title">DigiBlog Preview Placeholder</title>
+  <desc id="desc">Stylized website mockup placeholder for DigiBlog promotion section.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbe8dd" />
+      <stop offset="100%" stop-color="#f3d6c8" />
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="760" rx="28" fill="url(#bg)" />
+  <rect x="85" y="95" width="930" height="570" rx="22" fill="#fffaf7" stroke="#e6d4c6" />
+  <rect x="130" y="132" width="840" height="56" rx="14" fill="#f5e5da" />
+  <rect x="145" y="148" width="210" height="24" rx="12" fill="#e6c7b6" />
+  <rect x="130" y="220" width="410" height="380" rx="16" fill="#fff" stroke="#e8d8cc" />
+  <rect x="575" y="220" width="395" height="176" rx="16" fill="#fff" stroke="#e8d8cc" />
+  <rect x="575" y="424" width="395" height="176" rx="16" fill="#fff" stroke="#e8d8cc" />
+  <rect x="165" y="264" width="330" height="20" rx="10" fill="#ead7ca" />
+  <rect x="165" y="300" width="280" height="20" rx="10" fill="#efdfd3" />
+  <rect x="165" y="336" width="240" height="20" rx="10" fill="#f1e5dc" />
+  <circle cx="760" cy="312" r="66" fill="#f0c8b2" />
+  <rect x="642" y="472" width="260" height="24" rx="12" fill="#ead8cb" />
+  <rect x="642" y="512" width="210" height="24" rx="12" fill="#efdfd4" />
+</svg>

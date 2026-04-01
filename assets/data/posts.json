@@ -1,0 +1,123 @@
+{
+  "default": {
+    "images": {
+      "card": "/assets/pinterest/post-default-1200x1800.svg",
+      "hero": "/assets/pinterest/post-default-1200x1800.svg",
+      "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+    }
+  },
+  "posts": [
+    {
+      "slug": "why-i-started-made-for-this",
+      "title": "Why I Started Made for This",
+      "category": "Entrepreneur Journey",
+      "badge": "Start Here",
+      "published_at": "2020-12-06",
+      "description": "A personal story on motherhood, career transition, and building a meaningful life online.",
+      "url": "https://madeforthis.web.app/why-i-started-made-for-this.html",
+      "images": {
+        "card": "/assets/dental/why-i-started-hero.png",
+        "hero": "/assets/dental/why-i-started-hero.png",
+        "pinterest": "/assets/dental/why-i-started-hero.png"
+      }
+    },
+    {
+      "slug": "post-leaving-healthcare-harder-than-expected",
+      "title": "Leaving Healthcare Was Harder Than I Expected",
+      "category": "Entrepreneur Journey",
+      "badge": "Real Talk",
+      "published_at": "2020-12-06",
+      "description": "Honest reflections on leaving healthcare and rebuilding a new path.",
+      "url": "https://madeforthis.web.app/post-leaving-healthcare-harder-than-expected.html",
+      "images": {
+        "card": "/assets/leaving-healthcare.svg",
+        "hero": "/assets/leaving-healthcare.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-chaos-behind-getting-life-together",
+      "title": "The Chaos Behind Getting My Life Together",
+      "category": "Mom of 5 Life",
+      "badge": "Mom Life",
+      "published_at": "2020-12-06",
+      "description": "A relatable look at family chaos, productivity, and building a dream in real life.",
+      "url": "https://madeforthis.web.app/post-chaos-behind-getting-life-together.html",
+      "images": {
+        "card": "/assets/post-3.svg",
+        "hero": "/assets/post-3.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-sunday-reset-blueprint",
+      "title": "The Sunday Reset Blueprint",
+      "category": "Mom of 5 Life",
+      "badge": "Routine Reset",
+      "published_at": "2020-12-07",
+      "description": "A simple weekly reset routine for calmer, more intentional weekdays.",
+      "url": "https://madeforthis.web.app/post-sunday-reset-blueprint.html",
+      "images": {
+        "card": "/assets/post-1.svg",
+        "hero": "/assets/post-1.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-orthodontic-assistants-actually-do",
+      "title": "What Orthodontic Assistants Actually Do",
+      "category": "Orthodontic Assistant Life",
+      "badge": "Clinic Life",
+      "published_at": "2020-12-07",
+      "description": "Behind-the-scenes orthodontic assistant work most patients never see.",
+      "url": "https://madeforthis.web.app/post-orthodontic-assistants-actually-do.html",
+      "images": {
+        "card": "/assets/post-2.svg",
+        "hero": "/assets/post-2.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-real-goal-behind-made-for-this",
+      "title": "The Real Goal Behind Made for This",
+      "category": "Entrepreneur Journey",
+      "badge": "Vision",
+      "published_at": "2020-12-07",
+      "description": "The bigger vision behind Made For This and intentional living.",
+      "url": "https://madeforthis.web.app/post-real-goal-behind-made-for-this.html",
+      "images": {
+        "card": "/assets/post-1.svg",
+        "hero": "/assets/post-1.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-from-ortho-to-online",
+      "title": "From Ortho to Online",
+      "category": "Entrepreneur Journey",
+      "badge": "Build Online",
+      "published_at": "2020-12-08",
+      "description": "Learning a new digital world while building a purpose-driven brand.",
+      "url": "https://madeforthis.web.app/post-from-ortho-to-online.html",
+      "images": {
+        "card": "/assets/dental/home-featured-routine.png",
+        "hero": "/assets/post-3.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    },
+    {
+      "slug": "post-home-reset-checklist",
+      "title": "The 30-Minute Home Reset Checklist",
+      "category": "Mom of 5 Life",
+      "badge": "Popular",
+      "published_at": "2020-12-08",
+      "description": "A practical system to reset your home and week in under 30 minutes.",
+      "url": "https://madeforthis.web.app/post-home-reset-checklist.html",
+      "images": {
+        "card": "/assets/dental/home-featured-routine.png",
+        "hero": "/assets/post-1.svg",
+        "pinterest": "/assets/pinterest/post-default-1200x1800.svg"
+      }
+    }
+  ]
+}

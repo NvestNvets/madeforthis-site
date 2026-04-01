@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="DigiBlog T4 Live Printables hosted for Made For This under the shared clients.digioffice.shop deployment model."
+  />
+  <title>DigiBlog T4 Live Printables | Made For This</title>
+  <link rel="stylesheet" href="/printables/live-printables.css" />
+</head>
+<body data-page-mode="catalog">
+  <header class="lp-shell lp-topbar">
+    <a class="lp-brand" href="/index.html">Made For This</a>
+    <nav class="lp-nav" aria-label="Primary">
+      <a href="/printables/index.html" aria-current="page">Live Printables</a>
+      <a href="/admin/dashboard.html">Printable Admin</a>
+      <a href="/live-printables/kids-activity/index.html">Kids Bundle</a>
+      <a href="/dashboard.html">Main Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="lp-shell">
+    <section class="lp-hero">
+      <div>
+        <p class="lp-eyebrow">DigiBlog T4 Live Printable</p>
+        <h1>The simplest hosted printable engine possible.</h1>
+        <p class="lp-lead">
+          Uploaded designs become clean live pages under the same clients.digioffice.shop logic used by DigiApp and DigiFlyer. Static printables, live printables, and interactive fillable printables all fit the same system.
+        </p>
+        <div class="lp-actions">
+          <a class="lp-btn lp-btn-primary" href="/admin/dashboard.html">Create a Printable</a>
+          <a class="lp-btn" href="/printables/daily-focus-sheet/">Open Daily Focus Sheet</a>
+        </div>
+      </div>
+      <aside class="lp-note">
+        <strong>Bucket-first URL model</strong>
+        <p>Published URL pattern: https://clients.digioffice.shop/codee-live-printables/[slug]/</p>
+        <p>The dashboard prepares title, slug, type, metadata, review status, and future bucket deployment hooks.</p>
+      </aside>
+    </section>
+
+    <section class="lp-section">
+      <div class="lp-section-head">
+        <div>
+          <p class="lp-eyebrow">Published Printables</p>
+          <h2>Hosted under the shared live client system</h2>
+        </div>
+        <input id="catalog-search" class="lp-search" type="search" placeholder="Search title, category, or tag" />
+      </div>
+      <div id="printable-catalog" class="lp-grid"></div>
+    </section>
+  </main>
+
+  <script src="/js/live-printable-store.js"></script>
+  <script src="/js/live-printable-templates.js"></script>
+  <script src="/js/live-printable-catalog.js"></script>
+</body>
+</html>

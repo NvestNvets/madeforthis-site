@@ -1,0 +1,10 @@
+Simple Budget Overview
+
+Income
+Bills
+Spending
+Notes
+
+Footer:
+Made For This
+madeforthis.web.app

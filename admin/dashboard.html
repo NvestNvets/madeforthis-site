@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Printable Admin | DigiBlog T4 Live Printables</title>
+  <meta
+    name="description"
+    content="Creator and Codee review dashboard for DigiBlog T4 Live Printables deployed to clients.digioffice.shop."
+  />
+  <link rel="stylesheet" href="/printables/live-printables.css" />
+</head>
+<body>
+  <header class="lp-shell lp-topbar">
+    <a class="lp-brand" href="/index.html">Made For This</a>
+    <nav class="lp-nav" aria-label="Admin">
+      <a href="/admin/dashboard.html" aria-current="page">Printable Admin</a>
+      <a href="/printables/index.html">Live Printables</a>
+      <a href="/dashboard.html">Main Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="lp-shell">
+    <section class="lp-admin-shell">
+      <p class="lp-eyebrow">DigiBlog T4 Live Printable</p>
+      <h1>Upload, slug, review, and publish</h1>
+      <p class="lp-lead">
+        This dashboard keeps the workflow simple: choose the printable image, title it, generate the slug, assign the type and template, send it to Codee, and prepare the final bucket URL under clients.digioffice.shop/codee-live-printables/[slug]/.
+      </p>
+    </section>
+
+    <section class="lp-admin-grid">
+      <article class="lp-form-card">
+        <h2>Create or Edit Printable</h2>
+        <form id="printable-admin-form" class="lp-form-grid" novalidate>
+          <div class="lp-field-group">
+            <label for="printable-title">Title</label>
+            <input id="printable-title" class="lp-input" name="title" type="text" placeholder="Daily Focus Sheet" required />
+          </div>
+
+          <div class="lp-form-two">
+            <div class="lp-field-group">
+              <label for="printable-slug">Slug</label>
+              <input id="printable-slug" class="lp-input" name="slug" type="text" placeholder="daily-focus-sheet" />
+            </div>
+            <div class="lp-field-group">
+              <label for="printable-type">Printable type</label>
+              <select id="printable-type" class="lp-select" name="type">
+                <option value="static-printable">Static Printable</option>
+                <option value="live-printable">Live Printable</option>
+                <option value="interactive-live-printable">Interactive Live Printable (T4)</option>
+                <option value="bundle-printable">Bundle Printable</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lp-field-group">
+            <label for="printable-subtitle">Subtitle</label>
+            <input id="printable-subtitle" class="lp-input" name="subtitle" type="text" placeholder="Interactive daily planning sheet" />
+          </div>
+
+          <div class="lp-field-group">
+            <label for="printable-description">Description</label>
+            <textarea id="printable-description" class="lp-textarea" name="description" placeholder="Short description for the hosted printable page."></textarea>
+          </div>
+
+          <div class="lp-form-two">
+            <div class="lp-field-group">
+              <label for="printable-category">Category</label>
+              <input id="printable-category" class="lp-input" name="category" type="text" placeholder="planner" />
+            </div>
+            <div class="lp-field-group">
+              <label for="printable-tags">Tags</label>
+              <input id="printable-tags" class="lp-input" name="tags" type="text" placeholder="focus, planner, interactive" />
+            </div>
+          </div>
+
+          <div class="lp-form-two">
+            <div class="lp-field-group">
+              <label for="printable-template-type">Template type</label>
+              <select id="printable-template-type" class="lp-select" name="template_type">
+                <option value="daily-focus-sheet">Daily Focus Sheet</option>
+                <option value="planner-static">Planner Static</option>
+                <option value="schedule-static">Schedule Static</option>
+                <option value="checklist-static">Checklist Static</option>
+                <option value="bundle-cover">Bundle Cover</option>
+              </select>
+            </div>
+            <div class="lp-field-group">
+              <label for="printable-publish-status">Publish status</label>
+              <select id="printable-publish-status" class="lp-select" name="publish_status">
+                <option value="draft">Draft</option>
+                <option value="in_review">In Review</option>
+                <option value="needs_info">Needs Info</option>
+                <option value="approved">Approved</option>
+                <option value="published">Published</option>
+                <option value="archived">Archived</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="lp-field-group">
+            <label for="printable-image-select">Choose existing hosted asset</label>
+            <select id="printable-image-select" class="lp-select">
+              <option value="">Choose an existing hosted asset</option>
+            </select>
+          </div>
+
+          <div class="lp-field-group">
+            <label for="printable-image-url">Printable image URL</label>
+            <input id="printable-image-url" class="lp-input" name="image_url" type="text" placeholder="/live-printables/kids-activity/assets/madeforthios-daily-focus.jpeg" />
+            <p class="lp-form-help">Future hook: replace this with real bucket upload handling when storage auth is connected.</p>
+          </div>
+
+          <label class="lp-inline-actions">
+            <input id="reviewed-by-codee" type="checkbox" name="reviewed_by_codee" />
+            <span>Reviewed by Codee</span>
+          </label>
+
+          <div class="lp-actions">
+            <button class="lp-btn lp-btn-primary" type="submit">Save Draft</button>
+            <button class="lp-btn" id="send-to-codee" type="button">Send to Codee</button>
+            <button class="lp-btn" id="approve-printable" type="button">Approve</button>
+            <button class="lp-btn" id="publish-printable" type="button">Publish</button>
+          </div>
+        </form>
+        <p id="admin-status" class="lp-save-status"></p>
+
+        <div class="lp-codee-note">
+          <strong>Codee review flow</strong>
+          <p>For now, review and publish states are stored locally in the browser. The page structure and URL rules already match the final bucket path, but real shared publish still needs storage and auth wiring.</p>
+        </div>
+      </article>
+
+      <aside class="lp-preview-panel">
+        <h2>Printable Preview</h2>
+        <div id="admin-preview"></div>
+      </aside>
+    </section>
+
+    <section class="lp-section">
+      <div class="lp-section-head">
+        <div>
+          <p class="lp-eyebrow">Printable Records</p>
+          <h2>Drafts, review queue, and published printables</h2>
+        </div>
+      </div>
+      <div id="printable-record-list" class="lp-record-list"></div>
+    </section>
+  </main>
+
+  <script src="/js/live-printable-store.js"></script>
+  <script src="/js/live-printable-admin.js"></script>
+</body>
+</html>

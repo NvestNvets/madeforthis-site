@@ -1,0 +1,15 @@
+Meal Planner
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+Grocery List
+
+Footer:
+Made For This
+madeforthis.web.app

@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Made For This Studio for reviewing blog drafts and content signals." />
+    <title>Made For This Studio</title>
+    <link rel="stylesheet" href="style.css?v=20260401-8" />
+  </head>
+  <body class="logo-bg dashboard-is-loading">
+    <div class="background-glow" aria-hidden="true"></div>
+    <div class="dashboard-loader" id="dashboard-loader" role="status" aria-live="polite">
+      <div class="dashboard-loader-card">
+        <p class="overline">Made For This Studio</p>
+        <h2 class="dashboard-loader-title">Made For This</h2>
+        <p class="dashboard-loader-copy">Loading your blog studio</p>
+        <p class="small-copy">Pulling drafts, signals, and the current review queue.</p>
+        <div class="dashboard-loader-bar" aria-hidden="true"><span></span></div>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="header-wrap">
+        <a class="brand" href="index.html"><img src="/assets/brand/logo-primary.png" alt="Made For This" class="brand-logo" /></a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+          <a href="/index.html">Home</a>
+          <a href="/blog">Blog Hub</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section reveal">
+        <p class="overline">Made For This Studio</p>
+        <h1>Review blog drafts first</h1>
+        <p>Use this space to approve, deny, or refine the next story-led posts. This studio is now focused on the blog itself, not on page-by-page site cleanup.</p>
+      </section>
+
+      <section class="section reveal folder-tabs-shell">
+        <div class="folder-tabs" role="tablist" aria-label="Dashboard folders">
+          <button class="folder-tab folder-tab-bundles is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-blog-drafts" id="tab-button-blog-drafts" data-tab-target="blog-drafts">Made For This Studio</button>
+          <button class="folder-tab folder-tab-prompt" type="button" role="tab" aria-selected="false" aria-controls="tab-content-signals" id="tab-button-content-signals" data-tab-target="content-signals"><span class="folder-tab-mark" aria-hidden="true">C</span><span>Content Signals</span></button>
+        </div>
+
+        <div class="folder-panel-wrap">
+          <section class="folder-panel analytics-shell" id="tab-traffic" role="tabpanel" aria-labelledby="tab-button-traffic" data-tab-panel="traffic" hidden>
+            <p class="overline">Traffic</p>
+            <h2>Traffic Overview</h2>
+            <p id="analytics-status" class="small-copy" role="status" aria-live="polite">Loading reporting...</p>
+            <div id="analytics-summary-cards" class="analytics-summary-grid"></div>
+            <div id="analytics-traffic" style="margin-top:1rem"></div>
+            <div class="dashboard-note-box" style="margin-top:1rem">
+              <h3>Email Audience Loop</h3>
+              <p class="small-copy">Every Tier 4 signup now feeds a clean audience loop. The site captures the lead first, the funnel backend records it locally, then the contact is synced into client-specific Brevo lists so Pinterest clicks, blog traffic, freebies, and bundle buyers all become reusable campaign audiences.</p>
+              <div class="analytics-table">
+                <div class="analytics-row"><span>Lead source</span><strong>Pinterest pin, blog post, bundle page, popup, or giveaway form</strong></div>
+                <div class="analytics-row"><span>Site record</span><strong><code>leads.json</code> and <code>purchases.json</code> stay as the funnel source of truth</strong></div>
+                <div class="analytics-row"><span>Brevo list: leads</span><strong>Made For This | Leads</strong></div>
+                <div class="analytics-row"><span>Brevo list: freebie</span><strong>Made For This | Starter Printable Library</strong></div>
+                <div class="analytics-row"><span>Brevo list: buyers</span><strong>Made For This | Buyers</strong></div>
+                <div class="analytics-row"><span>Brevo list: product</span><strong>Made For This | Weekly Reset Bundle</strong></div>
+              </div>
+              <p class="small-copy" style="margin-top:0.8rem">How this works in the loop: Pinterest sends the click, the site captures the email, Brevo stores the audience, and then future blog drops, bundle offers, and launch pushes can target the exact people who already showed intent.</p>
+            </div>
+          </section>
+
+          <section class="folder-panel analytics-shell" id="tab-seo" role="tabpanel" aria-labelledby="tab-button-seo" data-tab-panel="seo" hidden>
+            <p class="overline">SEO</p>
+            <h2>Search Performance</h2>
+            <div id="analytics-seo"></div>
+          </section>
+
+          <section class="folder-panel is-active" id="tab-blog-drafts" role="tabpanel" aria-labelledby="tab-button-blog-drafts" data-tab-panel="blog-drafts">
+            <p class="overline">Made For This Studio</p>
+            <h2>Auto-posted demo drafts ready for Christina</h2>
+            <p>Codee builds the draft stack, drops each post onto the site as a WordPress demo draft, and lets Christina keep, approve, deny, or revise the version she sees. The focus here is editorial review, not stretched cards or side-lane clutter.</p>
+            <div class="analytics-summary-grid">
+              <article class="analytics-card">
+                <p class="overline">Draft queue</p>
+                <h3 id="blog-draft-count">0</h3>
+                <p class="small-copy">Review-ready stories waiting for approval.</p>
+              </article>
+              <article class="analytics-card">
+                <p class="overline">Recent signals</p>
+                <h3 id="content-signal-count">0</h3>
+                <p class="small-copy">Christina notes or Made For This emails found in the last 2 days.</p>
+              </article>
+              <article class="analytics-card">
+                <p class="overline">Approval path</p>
+                <h3>Keep demo + 3 pins</h3>
+                <p class="small-copy">Approval keeps the posted demo version and prepares three Pinterest angles.</p>
+              </article>
+            </div>
+            <div class="button-row" style="margin-top:1rem">
+              <button type="button" class="btn btn-primary" id="generate-blog-drafts">Generate 60+ drafts</button>
+              <button type="button" class="btn" id="refresh-blog-signals">Refresh signals</button>
+            </div>
+            <p id="blog-drafts-status" class="small-copy" role="status" aria-live="polite" style="margin-top:0.9rem"></p>
+            <div id="blog-drafts-grid" class="blog-draft-stack" style="margin-top:1rem"></div>
+          </section>
+
+          <section class="folder-panel" id="tab-pinterest" role="tabpanel" aria-labelledby="tab-button-pinterest" data-tab-panel="pinterest" hidden>
+            <p class="overline">Pinterest Intelligence</p>
+            <h2>Pinterest Traffic + Content Signals</h2>
+            <p>Use this tab to monitor the numbers, destination paths, and content decisions that matter most for Pinterest growth.</p>
+
+              <div class="analytics-summary-grid">
+                <article class="analytics-card">
+                  <p class="overline">Preferred Frequency</p>
+                  <h3>6 pins per week</h3>
+                  <p class="small-copy">1 approved blog story can become 3 pin angles plus supporting recap pins.</p>
+                </article>
+                <article class="analytics-card">
+                  <p class="overline">Primary Goal</p>
+                  <h3>Clicks to stories + email capture</h3>
+                  <p class="small-copy">Use blog hooks, emotional headlines, and printable CTAs to move readers deeper into the brand.</p>
+                </article>
+                <article class="analytics-card">
+                  <p class="overline">Campaign Loop</p>
+                  <h3>Create → Schedule → Review</h3>
+                  <p class="small-copy">Approve the story, package the 3 pin variants, then double down on the strongest click angles.</p>
+                </article>
+              </div>
+
+              <div class="analytics-columns">
+                <div class="dashboard-note-box">
+                  <h3>The power of this system</h3>
+                  <p class="small-copy">Made For This works best when one story turns into a repeatable traffic loop. Codee uses Christina's notes, shapes the post, and prepares the Pinterest packaging so a single idea can keep circulating.</p>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>One approved post becomes</span><strong>three pin angles, a WordPress-ready draft, and a printable CTA lane</strong></div>
+                    <div class="analytics-row"><span>Pinterest does</span><strong>discovery, saves, search traffic, and evergreen clicks</strong></div>
+                    <div class="analytics-row"><span>AI K9 Codee system does</span><strong>signal reading, draft generation, pin packaging, and consistency</strong></div>
+                    <div class="analytics-row"><span>The site does</span><strong>capture the click, deepen trust, and hold the product CTA for later</strong></div>
+                    <div class="analytics-row"><span>Result over time</span><strong>more saves, more visits, more signups, and better clarity on what stories work</strong></div>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Expected results</h3>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>Short term</span><strong>cleaner story publishing rhythm and stronger pin volume</strong></div>
+                    <div class="analytics-row"><span>Mid term</span><strong>steady Pinterest traffic into blog posts, email signups, and soft product CTAs</strong></div>
+                    <div class="analytics-row"><span>Long term</span><strong>an evergreen content engine that compounds every week</strong></div>
+                    <div class="analytics-row"><span>Why this matters</span><strong>pins keep circulating after posting day instead of disappearing</strong></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analytics-columns">
+                <div class="dashboard-note-box">
+                  <h3>Pinterest strategy overview</h3>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>Audience</span><strong>Women craving calm, clarity, healing, and a softer next chapter</strong></div>
+                    <div class="analytics-row"><span>Primary offer</span><strong>Story-led blog content that builds trust first</strong></div>
+                    <div class="analytics-row"><span>Support offer</span><strong>Printable placeholder CTAs attached only when relevant</strong></div>
+                    <div class="analytics-row"><span>Traffic goal</span><strong>Clicks into blog posts, signups, and later product interest</strong></div>
+                    <div class="analytics-row"><span>AI K9 Codee system role</span><strong>organize, track, and scale winning content angles</strong></div>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Launch sequence</h3>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>Day 1</span><strong>Approve the lead story and its 3 Pinterest angles</strong></div>
+                    <div class="analytics-row"><span>Day 2</span><strong>Publish one search-led pin tied to the new article</strong></div>
+                    <div class="analytics-row"><span>Day 3</span><strong>Publish the story-led pin and track click quality</strong></div>
+                    <div class="analytics-row"><span>Day 4</span><strong>Use the action-led variant as the follow-up pin</strong></div>
+                    <div class="analytics-row"><span>Day 5</span><strong>Promote the strongest post again with a new title angle</strong></div>
+                    <div class="analytics-row"><span>Day 6</span><strong>Pull the next Christina note into the next draft batch</strong></div>
+                    <div class="analytics-row"><span>Day 7</span><strong>Review what story angle actually earned the click</strong></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analytics-columns">
+                <div class="dashboard-note-box">
+                  <h3>Keyword cluster bank</h3>
+                  <textarea id="pinterest-keywords" class="dashboard-textarea-large">weekly reset routine
+reset your week
+Sunday reset checklist
+planner printable
+daily focus sheet
+habit tracker printable
+home reset routine
+printable for moms
+simple routines
+calm productivity
+family organization
+printable bundle</textarea>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Pin title bank</h3>
+                  <textarea id="pinterest-title-bank" class="dashboard-textarea-large">Weekly Reset Bundle for Busy Moms
+Reset Your Week Without Overwhelm
+The Printable Weekly Reset System
+Sunday Reset Routine That Actually Helps
+Daily Focus Sheet for Calmer Days
+The Planner Page That Helps You Catch Up
+Want a Simpler Weekly Reset?
+Printable Habit Tracker for Real Life</textarea>
+                  <div class="button-row" style="margin-top:0.9rem">
+                    <button type="button" class="btn" id="copy-pinterest-titles">Copy Titles</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analytics-columns">
+                <div class="dashboard-note-box">
+                  <h3>Pin description bank</h3>
+                  <textarea id="pinterest-description-bank" class="dashboard-textarea-large">A calm printable bundle to help you reset your week, plan ahead, and feel less overwhelmed. Start with the Weekly Reset Bundle and build a routine that actually fits real life.
+
+Use this Daily Focus Sheet when your week feels scattered. It is a simple printable designed for clear priorities, calmer planning, and more intentional days.
+
+Need a Sunday reset routine that feels realistic? This printable bundle includes planning pages, tracker pages, and reset tools you can come back to every week.
+
+Start with the free printable library, then explore the full Weekly Reset Bundle for a more complete reset system.</textarea>
+                  <div class="button-row" style="margin-top:0.9rem">
+                    <button type="button" class="btn" id="copy-pinterest-descriptions">Copy Descriptions</button>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Image checklist</h3>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>Bundle cover pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>Daily Focus Sheet pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>Weekly Reset Planner pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>Sunday Reset Routine pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>Habit Tracker pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>Free printable support pin</span><strong>Needed</strong></div>
+                    <div class="analytics-row"><span>One idea pin with quote/copy overlay</span><strong>Optional</strong></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="analytics-columns">
+                <div class="dashboard-note-box">
+                  <h3>Destination URL map</h3>
+                  <div class="analytics-table">
+                    <div class="analytics-row"><span>Bundle cover pins</span><strong>weekly-reset-bundle.html</strong></div>
+                    <div class="analytics-row"><span>Daily Focus Sheet pin</span><strong>reset-bundle-cover-page or bundle page</strong></div>
+                    <div class="analytics-row"><span>Planner and routine pins</span><strong>weekly-reset-bundle.html</strong></div>
+                    <div class="analytics-row"><span>Freebie support pin</span><strong>/free-library</strong></div>
+                    <div class="analytics-row"><span>Launch giveaway pin</span><strong>homepage hoodie signup</strong></div>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Campaign status</h3>
+                  <div class="status-chip-row" id="pinterest-status-row">
+                    <button type="button" class="status-chip is-active" data-pinterest-status="planning">Planning</button>
+                    <button type="button" class="status-chip" data-pinterest-status="creating">Creating Assets</button>
+                    <button type="button" class="status-chip" data-pinterest-status="scheduled">Scheduled</button>
+                    <button type="button" class="status-chip" data-pinterest-status="posted">Posted</button>
+                    <button type="button" class="status-chip" data-pinterest-status="reviewing">Reviewing Results</button>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Posting checklist</h3>
+                  <div class="task-checklist" id="pinterest-task-checklist">
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="urls" /> <span>Choose destination URL for each pin</span></label>
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="main_pins" /> <span>Create 3 main bundle pins</span></label>
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="support_pins" /> <span>Create 2 supporting freebie pins</span></label>
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="captions" /> <span>Prepare pin titles and descriptions</span></label>
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="codee_system" /> <span>Load campaign into the AI K9 Codee system</span></label>
+                    <label class="task-checklist-row"><input type="checkbox" data-pinterest-task="review" /> <span>Review clicks, saves, and top landing page weekly</span></label>
+                  </div>
+                </div>
+                <div class="dashboard-note-box">
+                  <h3>Preferred cadence</h3>
+                  <label for="pinterest-frequency">Posting preference</label>
+                  <select id="pinterest-frequency">
+                    <option value="6_per_week" selected>6 pins per week</option>
+                    <option value="5_per_week">5 pins per week</option>
+                    <option value="3_per_week">3 pins per week</option>
+                  </select>
+                  <label for="pinterest-focus-url">Primary campaign URL</label>
+                  <input id="pinterest-focus-url" type="url" value="https://madeforthis.web.app/bundles/weekly-reset-bundle.html" />
+                  <label for="pinterest-secondary-url">Secondary URL</label>
+                  <input id="pinterest-secondary-url" type="url" value="https://madeforthis.web.app/free-library" />
+                  <label for="pinterest-hook-angle">Primary hook angle</label>
+                  <input id="pinterest-hook-angle" type="text" value="Reset your week without overwhelm" />
+                  <div class="button-row" style="margin-top:1rem">
+                    <button type="button" class="btn btn-primary" id="save-pinterest-plan">Save Pinterest Plan</button>
+                  </div>
+                  <p id="pinterest-plan-message" class="small-copy" role="status" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="dashboard-note-box" style="margin-top:1rem">
+                <h3>Weekly publish board</h3>
+                <div class="analytics-table">
+                  <div class="analytics-row"><span>Monday</span><strong><input id="pinterest-day-1" type="text" placeholder="Bundle cover + reset promise pin" /></strong></div>
+                  <div class="analytics-row"><span>Tuesday</span><strong><input id="pinterest-day-2" type="text" placeholder="Daily Focus Sheet pin" /></strong></div>
+                  <div class="analytics-row"><span>Wednesday</span><strong><input id="pinterest-day-3" type="text" placeholder="Weekly Reset Planner pin" /></strong></div>
+                  <div class="analytics-row"><span>Thursday</span><strong><input id="pinterest-day-4" type="text" placeholder="Freebie support pin" /></strong></div>
+                  <div class="analytics-row"><span>Friday</span><strong><input id="pinterest-day-5" type="text" placeholder="Sunday Reset Routine pin" /></strong></div>
+                  <div class="analytics-row"><span>Saturday</span><strong><input id="pinterest-day-6" type="text" placeholder="Alternate headline test pin" /></strong></div>
+                  <div class="analytics-row"><span>Sunday</span><strong><input id="pinterest-day-7" type="text" placeholder="Roundup / what’s inside bundle pin" /></strong></div>
+                </div>
+              </div>
+          </section>
+
+          <section class="folder-panel" id="tab-pinterest-details" role="tabpanel" aria-labelledby="tab-button-pinterest-details" data-tab-panel="pinterest-details" hidden>
+            <p class="overline">Pinterest Packaging</p>
+            <h2>3 Pin Details Per Approved Story</h2>
+            <p>Every approved article gets three Pinterest-ready angles so Christina can publish one core idea as a story-led pin, a search-led pin, and an action-led pin without writing them from scratch each time.</p>
+            <div class="dashboard-note-box">
+              <div class="analytics-table">
+                <div class="analytics-row"><span>Angle 1</span><strong>Story-led hook for emotional connection</strong></div>
+                <div class="analytics-row"><span>Angle 2</span><strong>Search-led title for Pinterest discoverability</strong></div>
+                <div class="analytics-row"><span>Angle 3</span><strong>Action-led description that points back to the post</strong></div>
+                <div class="analytics-row"><span>Printable lane</span><strong>Every post keeps a printable placeholder CTA for later monetization</strong></div>
+              </div>
+            </div>
+            <p id="pinterest-details-status" class="small-copy" role="status" aria-live="polite" style="margin-top:1rem"></p>
+            <div id="pinterest-details-grid" class="bundle-card-grid" style="margin-top:1rem"></div>
+          </section>
+
+          <section class="folder-panel" id="tab-content-signals" role="tabpanel" aria-labelledby="tab-button-content-signals" data-tab-panel="content-signals" hidden>
+            <p class="overline">Codee Signals</p>
+            <h2>Recent Christina Notes</h2>
+            <p>Codee uses Sean's Gmail as the instruction stream. If the subject mentions Made For This or the sender is Christina in the last 2 days, that note becomes a signal for the next blog draft stack.</p>
+            <div class="dashboard-note-box" style="margin-bottom:1rem">
+              <div class="analytics-table">
+                <div class="analytics-row"><span>Source</span><strong>Sean's connected Gmail inbox</strong></div>
+                <div class="analytics-row"><span>Signal matches</span><strong>“Made For This” subject lines or recent Christina emails</strong></div>
+                <div class="analytics-row"><span>What Codee does</span><strong>Turns notes into topics, hooks, and blog draft direction</strong></div>
+              </div>
+            </div>
+            <p id="content-signals-status" class="small-copy" role="status" aria-live="polite"></p>
+            <div id="content-signals-grid" class="analytics-table" style="margin-top:1rem"></div>
+          </section>
+
+          <section class="folder-panel" id="tab-canva" role="tabpanel" aria-labelledby="tab-button-canva" data-tab-panel="canva" hidden>
+            <p class="overline">Canva Studio</p>
+            <h2>Canva Studio Command Center</h2>
+            <p>Use this workspace to connect Canva, route winning assets into editable designs, and keep launch graphics, Pinterest pins, and printable covers moving through one polished system.</p>
+
+            <div class="analytics-summary-grid">
+              <article class="analytics-card canva-summary-card">
+                <p class="overline">Connection</p>
+                <h3 id="canva-summary-connection">Checking Canva...</h3>
+                <p class="small-copy" id="canva-summary-account">Waiting for workspace status.</p>
+              </article>
+              <article class="analytics-card canva-summary-card">
+                <p class="overline">Queue</p>
+                <h3 id="canva-summary-queue">0 assets</h3>
+                <p class="small-copy" id="canva-summary-pending">No Canva jobs yet.</p>
+              </article>
+              <article class="analytics-card canva-summary-card">
+                <p class="overline">Ready To Edit</p>
+                <h3 id="canva-summary-ready">0 designs</h3>
+                <p class="small-copy" id="canva-summary-latest">The latest design handoff will appear here.</p>
+              </article>
+            </div>
+
+            <div class="analytics-summary-grid" style="margin-top:1rem">
+              <article class="analytics-card">
+                <p class="overline">What It Does</p>
+                <h3>Editable design workflow</h3>
+                <p class="small-copy">Take generated or uploaded winners and move them into Canva for cleaner typography, cover variants, quote cards, and launch graphics.</p>
+              </article>
+              <article class="analytics-card">
+                <p class="overline">Why It Matters</p>
+                <h3>Polish without rebuilding</h3>
+                <p class="small-copy">The client bucket stays the source of truth while Canva becomes the refinement layer for campaign-ready assets.</p>
+              </article>
+              <article class="analytics-card">
+                <p class="overline">Best Use Case</p>
+                <h3>Pinterest + launches</h3>
+                <p class="small-copy">Turn bundle covers, planner previews, and quote images into a reusable launch stack without starting from scratch.</p>
+              </article>
+            </div>
+
+            <div class="dashboard-note-box canva-workspace-box" style="margin-top:1rem">
+              <div class="section-heading-row">
+                <div>
+                  <h3>Canva integration</h3>
+                  <p class="small-copy">The AI K9 Codee system uses this connection to send hosted images into Canva design jobs so Christina can edit and refine them with a more professional visual workflow.</p>
+                </div>
+                <div class="button-row">
+                  <button type="button" class="btn" id="canva-refresh-workspace">Refresh Canva</button>
+                  <button type="button" class="btn btn-primary" id="canva-connect-button">Connect Canva</button>
+                </div>
+              </div>
+              <div class="analytics-table">
+                <div class="analytics-row"><span>Connection status</span><strong id="canva-connection-status">Checking Canva...</strong></div>
+                <div class="analytics-row"><span>What this adds</span><strong>Editable pin designs, faster headline swaps, bundle cover variants, and reusable template workflows</strong></div>
+                <div class="analytics-row"><span>Best use case</span><strong>Turn generated or uploaded winners into polished Canva campaign designs</strong></div>
+              </div>
+              <p class="small-copy" id="canva-connection-note" role="status" aria-live="polite" style="margin-top:0.8rem">Once connected, hosted image URLs can be sent into Canva design jobs from this dashboard.</p>
+            </div>
+
+            <div class="analytics-columns" style="margin-top:1rem">
+              <div class="dashboard-note-box">
+                <h3>Connection flow</h3>
+                <div class="analytics-table">
+                  <div class="analytics-row"><span>Step 1</span><strong>Click Connect Canva</strong></div>
+                  <div class="analytics-row"><span>Step 2</span><strong>Approve the Canva authorization screen</strong></div>
+                  <div class="analytics-row"><span>Step 3</span><strong>Return to the dashboard automatically</strong></div>
+                  <div class="analytics-row"><span>Step 4</span><strong>Send hosted winners into Canva for editing</strong></div>
+                </div>
+              </div>
+              <div class="dashboard-note-box">
+                <h3>Why this feels more professional</h3>
+                <p class="small-copy">Instead of copying raw auth URLs or jumping through separate tools, this tab gives Canva its own clean client-facing workspace. Pinterest creates momentum. Canva sharpens the assets. The bucket keeps everything organized.</p>
+              </div>
+            </div>
+
+            <div class="analytics-columns" style="margin-top:1rem">
+              <div class="dashboard-note-box">
+                <h3>Studio playbook</h3>
+                <div class="analytics-table">
+                  <div class="analytics-row"><span>1. Choose a winner</span><strong>Pick a saved draft, uploaded image, or bundle cover worth polishing</strong></div>
+                  <div class="analytics-row"><span>2. Send to Canva</span><strong>Use the handoff form below or quick-send from the source library</strong></div>
+                  <div class="analytics-row"><span>3. Edit in Canva</span><strong>Adjust typography, overlays, spacing, and launch wording</strong></div>
+                  <div class="analytics-row"><span>4. Reuse everywhere</span><strong>Bring the refined design back into Pinterest, launches, and product pages</strong></div>
+                </div>
+              </div>
+              <div class="dashboard-note-box">
+                <h3>Connected capabilities</h3>
+                <div id="canva-capability-list" class="analytics-pill-row">
+                  <span class="analytics-pill pending">Checking capabilities</span>
+                </div>
+                <p class="small-copy" id="canva-refresh-note" style="margin-top:0.8rem">Refresh the workspace after approving Canva so the latest design queue and edit links appear here.</p>
+              </div>
+            </div>
+
+            <div class="dashboard-note-box" style="margin-top:1rem">
+              <h3>Send hosted image to Canva</h3>
+              <form id="canva-import-form" class="dashboard-form" novalidate>
+                <label for="canva-import-title">Design title</label>
+                <input id="canva-import-title" type="text" placeholder="Example: Weekly Reset Bundle Cover Pin" />
+
+                <label for="canva-import-url">Hosted image URL</label>
+                <input id="canva-import-url" type="url" placeholder="https://storage.googleapis.com/..." />
+
+                <label for="canva-import-type">Campaign asset type</label>
+                <select id="canva-import-type">
+                  <option value="pinterest_pin">Pinterest pin</option>
+                  <option value="blog_graphic">Blog graphic</option>
+                  <option value="printable_cover">Printable cover</option>
+                  <option value="quote_card">Quote card</option>
+                </select>
+
+                <label for="canva-import-notes">Design notes</label>
+                <textarea id="canva-import-notes" placeholder="Example: Use this as the launch-week bundle cover pin and keep the same calm headline styling as the reset cover page."></textarea>
+
+                <div class="button-row">
+                  <button type="submit" class="btn btn-primary">Send to Canva</button>
+                </div>
+              </form>
+              <p class="small-copy" id="canva-import-message" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="dashboard-note-box" style="margin-top:1rem">
+              <div class="section-heading-row">
+                <div>
+                  <h3>Quick source library</h3>
+                  <p class="small-copy">Everything already created in the dashboard can be loaded into Canva from here. This keeps covers, pins, and custom images in one handoff zone.</p>
+                </div>
+              </div>
+              <div id="canva-source-library" class="pinterest-generated-grid"></div>
+            </div>
+
+            <div class="dashboard-note-box" style="margin-top:1rem">
+              <div class="section-heading-row">
+                <div>
+                  <h3>Canva design queue</h3>
+                  <p class="small-copy">Watch imports move from saved assets into active Canva designs. Ready items will show direct edit links as they become available.</p>
+                </div>
+              </div>
+              <div id="canva-design-status" class="analytics-table" style="margin-bottom:1rem"></div>
+              <div id="canva-import-queue" class="pinterest-generated-grid"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div><p class="footer-brand"><img src="/assets/brand/logo-primary.png" alt="Made For This" class="footer-logo" /></p><p class="small-copy">Lifestyle, mindset, and intentional living for your next chapter.</p></div>
+        <div><p class="footer-heading">Explore</p><p><a href="/index.html">Home</a> · <a href="/printables">Bundle Market</a> · <a href="/shop.html">Shop</a> · <a href="/about.html">About</a> · <a href="/contact.html">Contact</a> · <a href="/dashboard.html">Dashboard</a></p></div>
+        <div><p class="footer-heading">Social</p><p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a> · <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">Pinterest</a> · <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a></p></div>
+      </div>
+      <p class="footer-bottom">© 2026 Made For This. All rights reserved.</p>
+      <p class="footer-legal">Made For This™ is a trademark. Content and design are protected by copyright.</p>
+    </footer>
+
+    <a class="floating-upsell" href="https://aik9kennel.online" target="_blank" rel="noopener noreferrer">Learn About AI K9 Codee</a>
+    <script src="script.js?v=20260401-8"></script>
+  </body>
+</html>

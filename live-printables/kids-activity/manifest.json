@@ -1,0 +1,125 @@
+{
+  "brand_name": "Made For This",
+  "bundle_title": "Kids Activity & Coloring Printable Bundle",
+  "library_path": "/live-printables/kids-activity/",
+  "bundle_page_path": "/live-printables/kids-activity/bundle.html",
+  "admin_path": "/admin/dashboard.html",
+  "generated_at": "2026-03-19T13:20:58.503297+00:00",
+  "categories": [
+    "coloring",
+    "mazes",
+    "trace-and-learn",
+    "matching",
+    "cut-and-paste",
+    "find-and-seek",
+    "quiet-time",
+    "freebies",
+    "bundle-preview"
+  ],
+  "packs": [
+    {
+      "key": "coloring-pages-pack",
+      "title": "Coloring Pages Pack",
+      "path": "/live-printables/kids-activity/coloring-pages-pack.html",
+      "preview": "/live-printables/kids-activity/coloring-pages-pack.html"
+    },
+    {
+      "key": "mazes-pack",
+      "title": "Mazes Pack",
+      "path": "/live-printables/kids-activity/mazes-pack.html",
+      "preview": "/live-printables/kids-activity/mazes-pack.html"
+    },
+    {
+      "key": "trace-and-learn-pack",
+      "title": "Trace & Learn Pack",
+      "path": "/live-printables/kids-activity/trace-and-learn-pack.html",
+      "preview": "/live-printables/kids-activity/trace-and-learn-pack.html"
+    },
+    {
+      "key": "matching-activities-pack",
+      "title": "Matching Activities Pack",
+      "path": "/live-printables/kids-activity/matching-activities-pack.html",
+      "preview": "/live-printables/kids-activity/matching-activities-pack.html"
+    },
+    {
+      "key": "cut-and-paste-pack",
+      "title": "Cut & Paste Pack",
+      "path": "/live-printables/kids-activity/cut-and-paste-pack.html",
+      "preview": "/live-printables/kids-activity/cut-and-paste-pack.html"
+    },
+    {
+      "key": "find-and-seek-pack",
+      "title": "Find & Seek Pack",
+      "path": "/live-printables/kids-activity/find-and-seek-pack.html",
+      "preview": "/live-printables/kids-activity/find-and-seek-pack.html"
+    },
+    {
+      "key": "quiet-time-pack",
+      "title": "Quiet Time Pack",
+      "path": "/live-printables/kids-activity/quiet-time-pack.html",
+      "preview": "/live-printables/kids-activity/quiet-time-pack.html"
+    }
+  ],
+  "individual_pages": [
+    {
+      "key": "coloring-1",
+      "title": "You've Got This",
+      "category": "coloring",
+      "path": "/live-printables/kids-activity/activities/coloring-1.html"
+    },
+    {
+      "key": "coloring-2",
+      "title": "Be Kind",
+      "category": "coloring",
+      "path": "/live-printables/kids-activity/activities/coloring-2.html"
+    },
+    {
+      "key": "maze-1",
+      "title": "Help the Puppy Get Home",
+      "category": "mazes",
+      "path": "/live-printables/kids-activity/activities/maze-1.html"
+    },
+    {
+      "key": "maze-2",
+      "title": "Find the Toy",
+      "category": "mazes",
+      "path": "/live-printables/kids-activity/activities/maze-2.html"
+    },
+    {
+      "key": "trace-a",
+      "title": "Letter A",
+      "category": "trace-and-learn",
+      "path": "/live-printables/kids-activity/activities/trace-a.html"
+    },
+    {
+      "key": "trace-1",
+      "title": "Numbers 1 to 5",
+      "category": "trace-and-learn",
+      "path": "/live-printables/kids-activity/activities/trace-1.html"
+    },
+    {
+      "key": "matching-1",
+      "title": "Match the Pairs",
+      "category": "matching",
+      "path": "/live-printables/kids-activity/activities/matching-1.html"
+    },
+    {
+      "key": "cut-paste-1",
+      "title": "Build a House",
+      "category": "cut-and-paste",
+      "path": "/live-printables/kids-activity/activities/cut-paste-1.html"
+    },
+    {
+      "key": "find-seek-1",
+      "title": "Find 6 Objects",
+      "category": "find-and-seek",
+      "path": "/live-printables/kids-activity/activities/find-seek-1.html"
+    },
+    {
+      "key": "quiet-time-1",
+      "title": "Draw Your Favorite Thing",
+      "category": "quiet-time",
+      "path": "/live-printables/kids-activity/activities/quiet-time-1.html"
+    }
+  ]
+}

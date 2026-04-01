@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816 1056" role="img" aria-labelledby="t d">
+  <title id="t">Jesus Sees You coloring preview</title>
+  <desc id="d">Black outline printable page with quote and friendly owl.</desc>
+  <rect width="816" height="1056" fill="#fff"/>
+  <rect x="28" y="28" width="760" height="1000" fill="none" stroke="#111" stroke-width="10"/>
+  <text x="408" y="145" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial" font-size="68" fill="none" stroke="#111" stroke-width="3">JESUS</text>
+  <text x="408" y="220" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial" font-size="64" fill="none" stroke="#111" stroke-width="3">SEES YOU</text>
+  <ellipse cx="408" cy="555" rx="165" ry="190" fill="none" stroke="#111" stroke-width="12"/>
+  <circle cx="350" cy="505" r="48" fill="none" stroke="#111" stroke-width="10"/>
+  <circle cx="466" cy="505" r="48" fill="none" stroke="#111" stroke-width="10"/>
+  <circle cx="350" cy="505" r="10" fill="#111"/>
+  <circle cx="466" cy="505" r="10" fill="#111"/>
+  <path d="M408 535l-24 36h48z" fill="none" stroke="#111" stroke-width="10"/>
+  <path d="M245 320l70 62M571 320l-70 62" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M155 860h506" stroke="#111" stroke-width="10"/>
+  <circle cx="260" cy="860" r="26" fill="none" stroke="#111" stroke-width="8"/>
+  <circle cx="408" cy="860" r="26" fill="none" stroke="#111" stroke-width="8"/>
+  <circle cx="556" cy="860" r="26" fill="none" stroke="#111" stroke-width="8"/>
+</svg>

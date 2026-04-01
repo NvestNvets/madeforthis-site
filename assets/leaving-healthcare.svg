@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 780" role="img" aria-labelledby="title desc">
+  <title id="title">Leaving Healthcare Was Harder Than I Expected</title>
+  <desc id="desc">Neutral lifestyle graphic with clipboard, notebook, coffee mug, and headline text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6eee6" />
+      <stop offset="100%" stop-color="#efe2d7" />
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="780" fill="url(#bg)" />
+  <rect x="180" y="180" width="320" height="430" rx="16" fill="#fffaf6" stroke="#e2d4c8" />
+  <rect x="250" y="150" width="180" height="40" rx="12" fill="#dfd2c7" />
+  <rect x="220" y="250" width="240" height="16" rx="8" fill="#e8dbd0" />
+  <rect x="220" y="286" width="220" height="16" rx="8" fill="#ede3da" />
+  <rect x="220" y="322" width="200" height="16" rx="8" fill="#f0e7df" />
+  <rect x="560" y="220" width="430" height="320" rx="18" fill="#fffdfb" stroke="#e6d9ce" />
+  <rect x="600" y="280" width="350" height="16" rx="8" fill="#eadfd5" />
+  <rect x="600" y="316" width="300" height="16" rx="8" fill="#efe7df" />
+  <circle cx="1110" cy="430" r="95" fill="#fff9f4" stroke="#dfd0c3" />
+  <circle cx="1110" cy="430" r="58" fill="#c9b3a2" />
+  <text x="700" y="95" text-anchor="middle" fill="#7d5a48" font-size="56" font-family="Palatino Linotype, Georgia, serif">Leaving Healthcare Was Harder Than I Expected</text>
+  <text x="700" y="136" text-anchor="middle" fill="#8f7464" font-size="28" font-family="Palatino Linotype, Georgia, serif">The truth about starting over.</text>
+</svg>

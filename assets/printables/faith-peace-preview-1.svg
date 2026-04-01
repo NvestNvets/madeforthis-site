@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 816 1056" role="img" aria-labelledby="t d">
+  <title id="t">Walk By Faith Not By Sight coloring preview</title>
+  <desc id="d">Black outline printable page with quote and animal placeholder.</desc>
+  <rect width="816" height="1056" fill="#fff"/>
+  <rect x="28" y="28" width="760" height="1000" fill="none" stroke="#111" stroke-width="10"/>
+  <text x="408" y="138" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial" font-size="58" fill="none" stroke="#111" stroke-width="3">WALK BY FAITH</text>
+  <text x="408" y="208" text-anchor="middle" font-family="Arial Rounded MT Bold, Arial" font-size="52" fill="none" stroke="#111" stroke-width="3">NOT BY SIGHT</text>
+  <circle cx="408" cy="540" r="150" fill="none" stroke="#111" stroke-width="12"/>
+  <circle cx="360" cy="490" r="20" fill="none" stroke="#111" stroke-width="10"/>
+  <circle cx="456" cy="490" r="20" fill="none" stroke="#111" stroke-width="10"/>
+  <ellipse cx="408" cy="595" rx="60" ry="40" fill="none" stroke="#111" stroke-width="10"/>
+  <path d="M195 760c40-70 100-85 160-45M621 760c-40-70-100-85-160-45" fill="none" stroke="#111" stroke-width="10" stroke-linecap="round"/>
+  <path d="M170 860h476" stroke="#111" stroke-width="10"/>
+  <circle cx="220" cy="862" r="34" fill="none" stroke="#111" stroke-width="8"/>
+  <circle cx="596" cy="862" r="34" fill="none" stroke="#111" stroke-width="8"/>
+</svg>

@@ -1,0 +1,12 @@
+Habit Tracker
+
+Habit 1
+Habit 2
+Habit 3
+Habit 4
+30-day check grid
+Notes
+
+Footer:
+Made For This
+madeforthis.web.app

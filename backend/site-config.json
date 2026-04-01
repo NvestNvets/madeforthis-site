@@ -1,0 +1,168 @@
+{
+  "defaultSiteKey": "madeforthis",
+  "sites": {
+    "madeforthis": {
+      "brandName": "Made For This",
+      "senderName": "Made For This",
+      "siteUrl": "https://madeforthis.web.app",
+      "supportEmail": "support@digioffice.shop",
+      "supportReplyTo": "christinac90@yahoo.com",
+      "ownerEmail": "christinac90@yahoo.com",
+      "ownerName": "Nina",
+      "logoUrl": "https://madeforthis.web.app/assets/brand/logo-primary.png",
+      "dashboardUrl": "https://madeforthis.web.app/dashboard.html",
+      "livePrintableBaseUrl": "https://clients.digioffice.shop/codee-live-printables",
+      "latestPostUrl": "https://madeforthis.web.app/why-i-started-made-for-this",
+      "latestPostTitle": "Why I Started Made For This",
+      "pinterestProfileUrl": "https://www.pinterest.com/",
+      "checkChangesUrl": "https://madeforthis.web.app/",
+      "nextUploadChecklist": [
+        "Upload the final Weekly Reset Bundle PDF and ZIP into the paid bundle bucket folder",
+        "Upload the individual free printable PDFs into the free-library folder",
+        "Upload the next Pinterest pin image for the latest post",
+        "Upload one fresh featured cover image for the next printable or bundle"
+      ],
+      "bucketBasePath": "gs://clients.digioffice.shop/tier4-clients/madeforthis",
+      "ownerSupport": {
+        "enabled": false,
+        "frequencyDays": 3,
+        "topics": [
+          "weekly reset routines",
+          "simple home systems",
+          "orthodontic assistant work life",
+          "motherhood and ambition",
+          "printable offers that solve overwhelm",
+          "Sunday reset habits"
+        ]
+      },
+      "automation": {
+        "leadFollowupsEnabled": false,
+        "ownerNotificationsEnabled": false
+      },
+      "products": {
+        "free-library": {
+          "kind": "lead_magnet",
+          "title": "Starter Printable Library",
+          "description": "Free printable starter bundle for new subscribers.",
+          "priceAmountCents": 0,
+          "siteRelativeDownloadPath": "/downloads/made-for-this-starter-printable-library.zip",
+          "bucketFolder": "downloads/free-library",
+          "ctaPath": "/free-library"
+        },
+        "weekly-reset-bundle": {
+          "kind": "paid_bundle",
+          "title": "Weekly Reset Bundle",
+          "description": "Paid printable bundle with planners, routines, and reset pages.",
+          "siteRelativeDownloadPath": "/downloads/weekly-reset-bundle.zip",
+          "bucketFolder": "downloads/bundles/weekly-reset-bundle",
+          "productPagePath": "/bundles/weekly-reset-bundle.html",
+          "checkoutUrl": "https://buy.stripe.com/5kQbJ1asTgMe0X1ezR9oc0j",
+          "checkoutPath": "/bundles/weekly-reset-bundle.html?checkout=manual",
+          "priceLabel": "$7 launch price",
+          "priceAmountCents": 700,
+          "accessLabel": "Open Reset Bundle",
+          "assetDownloads": [
+            {
+              "key": "reset-bundle-cover-page",
+              "title": "Reset Bundle Cover Page",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/reset-bundle-cover-page/index.html"
+            },
+            {
+              "key": "daily-focus-sheet",
+              "title": "Daily Focus Sheet",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/daily-focus-sheet/index.html"
+            },
+            {
+              "key": "weekly-reset-planner",
+              "title": "Weekly Reset Planner",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/weekly-reset-planner/index.html"
+            },
+            {
+              "key": "sunday-reset-routine",
+              "title": "Sunday Reset Routine",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/sunday-reset-routine/index.html"
+            },
+            {
+              "key": "habit-tracker",
+              "title": "Habit Tracker",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/habit-tracker/index.html"
+            },
+            {
+              "key": "kids-activity-pack",
+              "title": "Kids Activity Pack",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/kids-activity-pack/index.html"
+            },
+            {
+              "key": "gratitude-journal-page",
+              "title": "Gratitude Journal Page",
+              "kind": "live_printable",
+              "downloadUrl": "https://clients.digioffice.shop/codee-live-printables/gratitude-journal-page/index.html"
+            }
+          ]
+        },
+        "kids-activity-coloring-bundle": {
+          "kind": "paid_bundle",
+          "title": "Kids Activity & Coloring Printable Bundle",
+          "description": "A calm printable bundle with coloring pages, mazes, tracing, matching, cut-and-paste, find-and-seek, and quiet time activities.",
+          "siteRelativeDownloadPath": "/live-printables/kids-activity/",
+          "bucketFolder": "downloads/bundles/kids-activity-coloring-bundle",
+          "productPagePath": "/bundles/kids-activity-coloring-bundle.html",
+          "checkoutUrl": "https://buy.stripe.com/7sYcN5dF53ZsaxBgHZ9oc0k",
+          "priceLabel": "$7 launch price",
+          "priceAmountCents": 700,
+          "accessLabel": "Open Your Printable Library",
+          "assetDownloads": [
+            {
+              "key": "kids-coloring-pages-pack",
+              "title": "Coloring Pages Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/coloring-pages-pack.html"
+            },
+            {
+              "key": "kids-mazes-pack",
+              "title": "Mazes Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/mazes-pack.html"
+            },
+            {
+              "key": "kids-trace-and-learn-pack",
+              "title": "Trace & Learn Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/trace-and-learn-pack.html"
+            },
+            {
+              "key": "kids-matching-pack",
+              "title": "Matching Activities Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/matching-activities-pack.html"
+            },
+            {
+              "key": "kids-cut-and-paste-pack",
+              "title": "Cut & Paste Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/cut-and-paste-pack.html"
+            },
+            {
+              "key": "kids-find-and-seek-pack",
+              "title": "Find & Seek Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/find-and-seek-pack.html"
+            },
+            {
+              "key": "kids-quiet-time-pack",
+              "title": "Quiet Time Pack",
+              "kind": "printable_pack",
+              "siteRelativeDownloadPath": "/live-printables/kids-activity/quiet-time-pack.html"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

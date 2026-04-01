@@ -1,0 +1,13 @@
+{
+  "name": "madeforthis-tier4-funnel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tier 4 funnel backend for Made For This and future DigiBlog clients.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
