@@ -286,9 +286,9 @@ p {
 }
 
 .brand-logo {
-  height: 156px;
+  height: 80px;
   width: auto;
-  max-height: 156px;
+  max-height: 80px;
   border: 0;
   border-radius: 0;
   object-fit: contain;
@@ -301,8 +301,8 @@ p {
 
 .site-header .brand-logo {
   width: auto !important;
-  height: 156px !important;
-  max-height: 156px !important;
+  height: 80px !important;
+  max-height: 80px !important;
   object-fit: contain;
   object-position: center;
   transform: none;
@@ -3700,5 +3700,55 @@ textarea {
 
   .section-heading-row {
     flex-direction: column;
+  }
+
+  /* ── Mobile header + hero overlap fix ───────────────────────────── */
+  /* Compact logo on mobile: brand already reduced to 80px in base
+     styles; keep the top offset small so the logo sits neatly at the
+     top-left without crowding the hero below it. */
+  .brand {
+    top: 0.6rem;
+    left: 0.75rem;
+  }
+
+  .menu-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  /* Give the hero section a clear top gap so the first line of the
+     headline always sits below the compact 80px logo. */
+  main {
+    padding-top: 6.5rem;
+  }
+
+  .hero-editorial {
+    padding-top: 1.2rem;
+  }
+
+  /* Keep trust cards compact and readable on narrow screens */
+  .trust-strip {
+    gap: 0.45rem;
+  }
+
+  .trust-card {
+    padding: 0.75rem;
+  }
+
+  /* Stack CTA buttons and give them full width on very small screens */
+  .hero-editorial .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-editorial .button-row .btn {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Prevent the hero image from covering text on mobile */
+  .hero-visual {
+    height: 200px;
+    margin-top: 0.75rem;
   }
 }
