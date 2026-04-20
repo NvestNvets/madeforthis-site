@@ -3702,3 +3702,71 @@ textarea {
     flex-direction: column;
   }
 }
+
+/* ── Mobile header & logo fix (320–599px) ──────────────────────────────────── */
+@media (max-width: 599px) {
+  /* Shrink the circular brand logo so it doesn't overlap content */
+  .brand-logo {
+    height: 72px;
+    max-height: 72px;
+    width: auto;
+  }
+
+  .site-header .brand-logo {
+    height: 72px !important;
+    max-height: 72px !important;
+    width: auto;
+  }
+
+  /* Keep brand anchor neatly at top-left */
+  .brand {
+    top: 0.6rem;
+    left: 0.75rem;
+  }
+
+  /* Align hamburger vertically with the logo */
+  .menu-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  /* Clear the reduced logo height: 0.6rem + 72px ≈ 82px → 5.5rem ≈ 88px gives a clean gap */
+  main {
+    padding-top: 5.5rem;
+  }
+
+  /* Hero: stack copy above image on narrow screens */
+  .hero-editorial {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Prevent hero image from being too tall on 320px viewports */
+  .hero-visual {
+    height: 160px;
+  }
+
+  /* Give sections a touch more breathing room */
+  .section {
+    padding: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Trust strip: single column on very narrow screens */
+  .trust-strip {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  /* Button rows: stack vertically so nothing overflows */
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .button-row .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
