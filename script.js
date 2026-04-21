@@ -957,7 +957,6 @@ const hydratePostImageAndSeo = async () => {
               <img src="${escapeHtml(post.images?.card || fallbackImages.card || '')}" alt="${escapeHtml(post.title || '')}" loading="lazy" decoding="async" width="900" height="1200" />
               <h3>${escapeHtml(post.title || '')}</h3>
               <p>${escapeHtml(post.description || '')}</p>
-              ${post.published_at ? `<p class="small-copy">${escapeHtml(formatShelfDate(post.published_at))}</p>` : ''}
               <a class="text-link" href="${escapeHtml(post.url || '#')}">Read more</a>
             </article>
           `
