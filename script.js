@@ -4158,7 +4158,7 @@ const mountLeadPopup = () => {
     <button class="lead-popup-close" type="button" aria-label="Close signup popup">×</button>
     <p class="overline">Free Gift</p>
     <h2>Get These Pins Free When You Sign Up!</h2>
-    <img class="lead-popup-pin-img" src="/assets/dental/pinterest-pins2.png" alt="Free Pinterest pins preview" loading="lazy" />
+    <img id="lead-popup-pin-img" class="lead-popup-pin-img" src="/assets/dental/pinterest-pin.png" alt="Free Pinterest pins preview" loading="lazy" />
     <p class="small-copy">Join and instantly unlock our exclusive printable pins plus weekly reset tools, planner pages, and kids worksheets.</p>
     <form class="lead-capture-form" data-lead-source="popup-free-library" novalidate>
       <label class="sr-only" for="lead-popup-name">Name</label>
@@ -4175,9 +4175,36 @@ const mountLeadPopup = () => {
   const popupForm = popup.querySelector('.lead-capture-form');
   const popupMessage = popup.querySelector('[data-lead-message]');
 
+  const staticPins = [
+    '/assets/dental/pinterest-pin.png',
+    '/assets/dental/pinterest-pins2.png'
+  ];
+  const uploadedPins = (loadSavedPinterestUploads() || [])
+    .filter((item) => item.imageUrl)
+    .map((item) => item.imageUrl);
+  const allPins = [...uploadedPins, ...staticPins];
+  let currentPinIndex = 0;
+  const pinFadeDurationMs = 300;
+  const pinImg = popup.querySelector('#lead-popup-pin-img');
+  let rotatePinsInterval = null;
+  if (pinImg && allPins.length > 1) {
+    rotatePinsInterval = window.setInterval(() => {
+      currentPinIndex = (currentPinIndex + 1) % allPins.length;
+      pinImg.classList.add('lead-popup-pin-fade');
+      window.setTimeout(() => {
+        pinImg.src = allPins[currentPinIndex];
+        pinImg.classList.remove('lead-popup-pin-fade');
+      }, pinFadeDurationMs);
+    }, 5 * 60 * 1000);
+  }
+
   const closePopup = () => {
     popup.classList.remove('show');
     sessionStorage.setItem(LEAD_POPUP_SEEN_KEY, '1');
+    if (rotatePinsInterval !== null) {
+      window.clearInterval(rotatePinsInterval);
+      rotatePinsInterval = null;
+    }
   };
 
   closeBtn?.addEventListener('click', closePopup);
