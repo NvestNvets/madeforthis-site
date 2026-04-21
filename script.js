@@ -4147,8 +4147,10 @@ document.querySelectorAll('.lead-capture-form[data-lead-source]').forEach((form)
 });
 
 const LEAD_POPUP_PIN_IMAGES = [
-  { src: '/assets/dental/pinterest-pin.png', alt: 'Free Pinterest pin preview' },
-  { src: '/assets/dental/pinterest-pins2.png', alt: 'Free Pinterest pins preview' },
+  { src: '/assets/popup/why-i-started-pin.png', alt: 'Why I Started Made For This – free Pinterest pin' },
+  { src: '/assets/popup/personal-growth-printable.png', alt: 'Personal Growth printable worksheet' },
+  { src: '/assets/popup/lifestyle-journal.png', alt: 'Cozy journal and coffee lifestyle photo' },
+  { src: '/assets/popup/funny-coloring-pages.png', alt: 'Funny Quote Coloring Pages – 30 fun designs' },
 ];
 
 const mountLeadPopup = () => {
@@ -4162,9 +4164,9 @@ const mountLeadPopup = () => {
   popup.innerHTML = `
     <button class="lead-popup-close" type="button" aria-label="Close signup popup">×</button>
     <p class="overline">Free Gift</p>
-    <h2>Get These Pins Free When You Sign Up!</h2>
+    <h2>Get Free Printables When You Sign Up!</h2>
     <img class="lead-popup-pin-img" src="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].src)}" alt="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].alt)}" loading="lazy" />
-    <p class="small-copy">Join and instantly unlock our exclusive printable pins plus weekly reset tools, planner pages, and kids worksheets.</p>
+    <p class="small-copy">Join and instantly unlock free printables including personal growth sheets, coloring pages, weekly reset tools, and more.</p>
     <form class="lead-capture-form" data-lead-source="popup-free-library" novalidate>
       <label class="sr-only" for="lead-popup-name">Name</label>
       <input id="lead-popup-name" name="name" type="text" placeholder="Your name" required />

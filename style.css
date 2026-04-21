@@ -1018,7 +1018,7 @@ main {
   margin: 0.55rem 0;
   display: block;
   object-fit: cover;
-  max-height: 200px;
+  max-height: 260px;
   object-position: top;
   transition: opacity 0.3s ease;
 }
