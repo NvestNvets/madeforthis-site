@@ -1141,6 +1141,17 @@ if (menuToggle && mainNav) {
   });
 }
 
+const brandLink = document.querySelector('.site-header .brand');
+if (brandLink) {
+  brandLink.addEventListener('click', (event) => {
+    const currentPath = normalizePath(window.location.pathname);
+    const targetPath = normalizePath(brandLink.getAttribute('href') || '/index.html');
+    if (currentPath !== targetPath) return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Shared footer year
 const yearNode = document.getElementById('year');
 if (yearNode) {
@@ -4140,8 +4151,31 @@ document.querySelectorAll('.lead-capture-form[data-lead-source]').forEach((form)
 });
 
 const LEAD_POPUP_PIN_IMAGES = [
-  { src: '/assets/dental/pinterest-pin.png', alt: 'Free Pinterest pin preview' },
-  { src: '/assets/dental/pinterest-pins2.png', alt: 'Free Pinterest pins preview' },
+  { src: '/assets/madefirthis-free-bundle.png', alt: 'Made For This free bundle preview' },
+  { src: '/assets/dental/jewelry-cover.png', alt: 'Made For This jewelry cover image' },
+  { src: '/assets/dental/home-featured-mindset.png', alt: 'Home featured mindset image' },
+  { src: '/assets/dental/pinterest-pin.png', alt: 'Pinterest pin preview' },
+  { src: '/assets/dental/new-blog-logo.png', alt: 'New blog logo graphic' },
+  { src: '/assets/dental/home-post-of-the-day.png', alt: 'Home post of the day preview' },
+  { src: '/assets/dental/Homepage-hero.png', alt: 'Homepage hero preview' },
+  { src: '/assets/dental/pinterest-pins2.png', alt: 'Pinterest pin collage preview' },
+  { src: '/assets/dental/madeforthis-hoodie.png', alt: 'Made For This hoodie product preview' },
+  { src: '/assets/dental/madeforthis-logo.png', alt: 'Made For This logo graphic' },
+  { src: '/assets/dental/why-i-started-hero.png', alt: 'Why I Started hero image' },
+  { src: '/assets/dental/Ai-K9-Codee-logo.png', alt: 'AI K9 Codee logo graphic' },
+  { src: '/assets/dental/new -blog-logo.png', alt: 'Alternate new blog logo graphic' },
+  { src: '/assets/dental/home-featured-routine.png', alt: 'Home featured routine image' },
+  { src: '/assets/dental/site-logo.png', alt: 'Site logo graphic' },
+  { src: '/assets/dental/digiblog-logo.png', alt: 'Digi blog logo graphic' },
+  { src: '/assets/printables/kids-activity/kids-quiet-preview.png', alt: 'Kids quiet activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-cut-preview.png', alt: 'Kids cut activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-find-preview.png', alt: 'Kids find activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-matching-preview.png', alt: 'Kids matching activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-trace-preview.png', alt: 'Kids trace activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-coloring-preview.png', alt: 'Kids coloring activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-mazes-preview.png', alt: 'Kids mazes activity printable preview' },
+  { src: '/assets/madeforthis-printables-cover.PNG', alt: 'Made For This printables cover image' },
+  { src: '/assets/brand/logo-primary.png', alt: 'Made For This primary brand logo' },
 ];
 
 const mountLeadPopup = () => {
@@ -4155,9 +4189,9 @@ const mountLeadPopup = () => {
   popup.innerHTML = `
     <button class="lead-popup-close" type="button" aria-label="Close signup popup">×</button>
     <p class="overline">Free Gift</p>
-    <h2>Get These Pins Free When You Sign Up!</h2>
+    <h2>Get Free Printables When You Sign Up!</h2>
     <img class="lead-popup-pin-img" src="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].src)}" alt="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].alt)}" loading="lazy" />
-    <p class="small-copy">Join and instantly unlock our exclusive printable pins plus weekly reset tools, planner pages, and kids worksheets.</p>
+    <p class="small-copy">Join and instantly unlock free printables including personal growth sheets, coloring pages, weekly reset tools, and more.</p>
     <form class="lead-capture-form" data-lead-source="popup-free-library" novalidate>
       <label class="sr-only" for="lead-popup-name">Name</label>
       <input id="lead-popup-name" name="name" type="text" placeholder="Your name" required />
