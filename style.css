@@ -1000,7 +1000,7 @@ main {
   right: 0.7rem;
   bottom: 0.7rem;
   z-index: 90;
-  width: min(88vw, 330px);
+  width: min(92vw, 360px);
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -1010,6 +1010,16 @@ main {
   transform: translateY(14px);
   pointer-events: none;
   transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.lead-popup-pin-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0.55rem 0;
+  display: block;
+  object-fit: cover;
+  max-height: 200px;
+  object-position: top;
 }
 
 .lead-popup.show {
