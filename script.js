@@ -4146,6 +4146,11 @@ document.querySelectorAll('.lead-capture-form[data-lead-source]').forEach((form)
   });
 });
 
+const LEAD_POPUP_PIN_IMAGES = [
+  { src: '/assets/dental/pinterest-pin.png', alt: 'Free Pinterest pin preview' },
+  { src: '/assets/dental/pinterest-pins2.png', alt: 'Free Pinterest pins preview' },
+];
+
 const mountLeadPopup = () => {
   if (sessionStorage.getItem(LEAD_POPUP_SEEN_KEY) === '1') return;
   if (readSessionLead()?.email) return;
@@ -4158,7 +4163,7 @@ const mountLeadPopup = () => {
     <button class="lead-popup-close" type="button" aria-label="Close signup popup">×</button>
     <p class="overline">Free Gift</p>
     <h2>Get These Pins Free When You Sign Up!</h2>
-    <img class="lead-popup-pin-img" src="/assets/dental/pinterest-pins2.png" alt="Free Pinterest pins preview" loading="lazy" />
+    <img class="lead-popup-pin-img" src="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].src)}" alt="${escapeHtml(LEAD_POPUP_PIN_IMAGES[0].alt)}" loading="lazy" />
     <p class="small-copy">Join and instantly unlock our exclusive printable pins plus weekly reset tools, planner pages, and kids worksheets.</p>
     <form class="lead-capture-form" data-lead-source="popup-free-library" novalidate>
       <label class="sr-only" for="lead-popup-name">Name</label>
@@ -4174,8 +4179,22 @@ const mountLeadPopup = () => {
   const closeBtn = popup.querySelector('.lead-popup-close');
   const popupForm = popup.querySelector('.lead-capture-form');
   const popupMessage = popup.querySelector('[data-lead-message]');
+  const pinImg = popup.querySelector('.lead-popup-pin-img');
+
+  let pinIndex = 0;
+  const pinRotationInterval = window.setInterval(() => {
+    if (!pinImg) return;
+    pinImg.classList.add('lead-popup-pin-fade');
+    window.setTimeout(() => {
+      pinIndex = (pinIndex + 1) % LEAD_POPUP_PIN_IMAGES.length;
+      pinImg.src = LEAD_POPUP_PIN_IMAGES[pinIndex].src;
+      pinImg.alt = LEAD_POPUP_PIN_IMAGES[pinIndex].alt;
+      pinImg.classList.remove('lead-popup-pin-fade');
+    }, 300);
+  }, 5000);
 
   const closePopup = () => {
+    clearInterval(pinRotationInterval);
     popup.classList.remove('show');
     sessionStorage.setItem(LEAD_POPUP_SEEN_KEY, '1');
   };
@@ -4184,6 +4203,7 @@ const mountLeadPopup = () => {
   popupForm?.addEventListener('submit', async (event) => {
     event.preventDefault();
     await submitLeadCapture(popupForm, popupMessage);
+    clearInterval(pinRotationInterval);
     sessionStorage.setItem(LEAD_POPUP_SEEN_KEY, '1');
   });
 

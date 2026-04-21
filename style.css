@@ -1020,6 +1020,11 @@ main {
   object-fit: cover;
   max-height: 200px;
   object-position: top;
+  transition: opacity 0.3s ease;
+}
+
+.lead-popup-pin-img.lead-popup-pin-fade {
+  opacity: 0;
 }
 
 .lead-popup.show {
