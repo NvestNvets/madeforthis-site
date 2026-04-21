@@ -4156,15 +4156,16 @@ const mountLeadPopup = () => {
   popup.setAttribute('aria-label', 'Free printable signup');
   popup.innerHTML = `
     <button class="lead-popup-close" type="button" aria-label="Close signup popup">×</button>
-    <p class="overline">Free Printables</p>
-    <h2>Want the Free Printable Library?</h2>
-    <p class="small-copy">Join for weekly reset tools, planner pages, and kids worksheets.</p>
+    <p class="overline">Free Gift</p>
+    <h2>Get These Pins Free When You Sign Up!</h2>
+    <img class="lead-popup-pin-img" src="/assets/dental/pinterest-pins2.png" alt="Free Pinterest pins preview" loading="lazy" />
+    <p class="small-copy">Join and instantly unlock our exclusive printable pins plus weekly reset tools, planner pages, and kids worksheets.</p>
     <form class="lead-capture-form" data-lead-source="popup-free-library" novalidate>
       <label class="sr-only" for="lead-popup-name">Name</label>
       <input id="lead-popup-name" name="name" type="text" placeholder="Your name" required />
       <label class="sr-only" for="lead-popup-email">Email</label>
       <input id="lead-popup-email" name="email" type="email" placeholder="you@example.com" required />
-      <button class="btn btn-primary" type="submit">Get Free Access</button>
+      <button class="btn btn-primary" type="submit">Yes! Send Me the Free Pins</button>
     </form>
     <p class="lead-message" data-lead-message role="status" aria-live="polite"></p>
   `;
