@@ -4147,10 +4147,31 @@ document.querySelectorAll('.lead-capture-form[data-lead-source]').forEach((form)
 });
 
 const LEAD_POPUP_PIN_IMAGES = [
-  { src: '/assets/popup/why-i-started-pin.png', alt: 'Why I Started Made For This – free Pinterest pin' },
-  { src: '/assets/popup/personal-growth-printable.png', alt: 'Personal Growth printable worksheet' },
-  { src: '/assets/popup/lifestyle-journal.png', alt: 'Cozy journal and coffee lifestyle photo' },
-  { src: '/assets/popup/funny-coloring-pages.png', alt: 'Funny Quote Coloring Pages – 30 fun designs' },
+  { src: '/assets/madefirthis-free-bundle.png', alt: 'Made For This free bundle preview' },
+  { src: '/assets/dental/jewelry-cover.png', alt: 'Made For This jewelry cover image' },
+  { src: '/assets/dental/home-featured-mindset.png', alt: 'Home featured mindset image' },
+  { src: '/assets/dental/pinterest-pin.png', alt: 'Pinterest pin preview' },
+  { src: '/assets/dental/new-blog-logo.png', alt: 'New blog logo graphic' },
+  { src: '/assets/dental/home-post-of-the-day.png', alt: 'Home post of the day preview' },
+  { src: '/assets/dental/Homepage-hero.png', alt: 'Homepage hero preview' },
+  { src: '/assets/dental/pinterest-pins2.png', alt: 'Pinterest pin collage preview' },
+  { src: '/assets/dental/madeforthis-hoodie.png', alt: 'Made For This hoodie product preview' },
+  { src: '/assets/dental/madeforthis-logo.png', alt: 'Made For This logo graphic' },
+  { src: '/assets/dental/why-i-started-hero.png', alt: 'Why I Started hero image' },
+  { src: '/assets/dental/Ai-K9-Codee-logo.png', alt: 'AI K9 Codee logo graphic' },
+  { src: '/assets/dental/new -blog-logo.png', alt: 'Alternate new blog logo graphic' },
+  { src: '/assets/dental/home-featured-routine.png', alt: 'Home featured routine image' },
+  { src: '/assets/dental/site-logo.png', alt: 'Site logo graphic' },
+  { src: '/assets/dental/digiblog-logo.png', alt: 'Digi blog logo graphic' },
+  { src: '/assets/printables/kids-activity/kids-quiet-preview.png', alt: 'Kids quiet activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-cut-preview.png', alt: 'Kids cut activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-find-preview.png', alt: 'Kids find activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-matching-preview.png', alt: 'Kids matching activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-trace-preview.png', alt: 'Kids trace activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-coloring-preview.png', alt: 'Kids coloring activity printable preview' },
+  { src: '/assets/printables/kids-activity/kids-mazes-preview.png', alt: 'Kids mazes activity printable preview' },
+  { src: '/assets/madeforthis-printables-cover.PNG', alt: 'Made For This printables cover image' },
+  { src: '/assets/brand/logo-primary.png', alt: 'Made For This primary brand logo' },
 ];
 
 const mountLeadPopup = () => {
