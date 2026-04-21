@@ -258,12 +258,6 @@ const parseIsoDate = (value) => {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 };
 
-const formatShelfDate = (value) => {
-  const parsed = parseIsoDate(value);
-  if (!parsed) return '';
-  return parsed.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
-};
-
 const buildLiveHomepageDraftPosts = (drafts, fallbackImages) => {
   return (Array.isArray(drafts) ? drafts : [])
     .filter((draft) => {
@@ -876,7 +870,6 @@ const hydratePostImageAndSeo = async () => {
                         <img src="${escapeHtml(post.images?.card || fallbackImages.card || '')}" alt="${escapeHtml(post.title || '')}" loading="lazy" decoding="async" />
                         <h4>${escapeHtml(post.title || '')}</h4>
                         <p>${escapeHtml(post.description || '')}</p>
-                        ${post.published_at ? `<p class="small-copy">${escapeHtml(formatShelfDate(post.published_at))}</p>` : ''}
                         <a class="text-link" href="${escapeHtml(post.url || '#')}">Open post</a>
                       </article>
                     `
