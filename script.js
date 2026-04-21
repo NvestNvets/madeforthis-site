@@ -1148,6 +1148,17 @@ if (menuToggle && mainNav) {
   });
 }
 
+const brandLink = document.querySelector('.site-header .brand');
+if (brandLink) {
+  brandLink.addEventListener('click', (event) => {
+    const currentPath = normalizePath(window.location.pathname);
+    const targetPath = normalizePath(brandLink.getAttribute('href') || '/index.html');
+    if (currentPath !== targetPath) return;
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Shared footer year
 const yearNode = document.getElementById('year');
 if (yearNode) {
